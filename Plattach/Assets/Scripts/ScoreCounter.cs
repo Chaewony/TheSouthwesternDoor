@@ -36,7 +36,10 @@ public class ScoreCounter : MonoBehaviour
 	public Image energy;
 	public Text energypercent;
 
-	public int plusMove; 
+	public int plusMove;
+
+	AudioSource audioSource;
+	public AudioClip bonusAudio;
 	void Start()
 	{
 		this.left_counter = this.gameObject.GetComponent<MoveCounter>();
@@ -49,6 +52,7 @@ public class ScoreCounter : MonoBehaviour
 		this.last.total_score = this.scoreManager.GetCurrentScore();
 		this.guistyle.fontSize = 25;
 		this.last.bonus_gage = 0;
+		audioSource = GetComponent<AudioSource>();
 	}
 
 	void OnGUI()
@@ -134,6 +138,10 @@ public class ScoreCounter : MonoBehaviour
 			this.last.bonus_gage = 0;
 			move_counter.plusLeftMoves(plusMove);
 			bonusCount++;
+			audioSource.clip = bonusAudio;      //게이지 다 차면 나는 소리
+			audioSource.pitch += 0.7f;
+			audioSource.Play();
+			audioSource.pitch -= 0.7f;
 		}
 	}
 }

@@ -34,6 +34,8 @@ public class BlockRoot : MonoBehaviour
 	AudioSource audioSource;
 	public AudioClip targetAudio;
 	public AudioClip puzzleMatch;
+	public AudioClip bombAudio;
+	public AudioClip colorAudio;
 
 	public bool isGrabbable;
 
@@ -87,6 +89,8 @@ public class BlockRoot : MonoBehaviour
                         {
 							this.grabbed_block.toVanishing();
 							bombBtn.UseBombItem();
+							audioSource.clip = bombAudio;
+							audioSource.Play();
 						}
 							
 						break;
@@ -127,6 +131,8 @@ public class BlockRoot : MonoBehaviour
 					this.swapBlockChangeColor(grabbed_block, grabbed_block.slide_dir, swap_target);
 					this.grabbed_block = null;
 					colorBtn.UseColorItem();
+					audioSource.clip = colorAudio;
+					audioSource.Play();
 					break;
 				}
 

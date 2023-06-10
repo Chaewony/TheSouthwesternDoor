@@ -250,7 +250,7 @@ GameObject:
   - component: {fileID: 400523208}
   - component: {fileID: 400523207}
   m_Layer: 0
-  m_Name: CloudVido
+  m_Name: CloudVideo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -264,7 +264,7 @@ VideoPlayer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 400523206}
   m_Enabled: 1
-  m_VideoClip: {fileID: 32900000, guid: ee7466fb1604d8440869f79468922304, type: 3}
+  m_VideoClip: {fileID: 32900000, guid: 1972ecd06db0dd44e9d53c9ad45416f5, type: 3}
   m_TargetCameraAlpha: 1
   m_TargetCamera3DLayout: 0
   m_TargetCamera: {fileID: 0}
@@ -277,14 +277,12 @@ VideoPlayer:
   m_DataSource: 0
   m_PlaybackSpeed: 1
   m_AudioOutputMode: 2
-  m_TargetAudioSources:
-  - {fileID: 0}
-  m_DirectAudioVolumes:
-  - 1
+  m_TargetAudioSources: []
+  m_DirectAudioVolumes: []
   m_Url: 
-  m_EnabledAudioTracks: 01
-  m_DirectAudioMutes: 00
-  m_ControlledAudioTrackCount: 1
+  m_EnabledAudioTracks: 
+  m_DirectAudioMutes: 
+  m_ControlledAudioTrackCount: 0
   m_PlayOnAwake: 1
   m_SkipOnDrop: 1
   m_Looping: 0
@@ -918,7 +916,7 @@ GameObject:
   - component: {fileID: 1256346572}
   - component: {fileID: 1256346573}
   m_Layer: 0
-  m_Name: GotoMain
+  m_Name: GotoTuto5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -947,7 +945,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1256346571}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5d1113094675e4d4aad032e3d5cb4c71, type: 3}
+  m_Script: {fileID: 11500000, guid: 0c633b46a91fd6244a0640c25c54675e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   scoreManagerObject: {fileID: 0}
@@ -1127,7 +1125,7 @@ GameObject:
   - component: {fileID: 1423607982}
   - component: {fileID: 1423607981}
   m_Layer: 5
-  m_Name: Start
+  m_Name: Next
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1211,7 +1209,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 1256346573}
-        m_TargetAssemblyTypeName: GotoMain, Assembly-CSharp
+        m_TargetAssemblyTypeName: GotoTuto5, Assembly-CSharp
         m_MethodName: OnClick
         m_Mode: 1
         m_Arguments:
@@ -1605,7 +1603,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0.120423555, b: 1, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1625,7 +1623,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Start
+  m_Text: Next
 --- !u!222 &1999468541
 CanvasRenderer:
   m_ObjectHideFlags: 0
