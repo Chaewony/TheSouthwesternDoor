@@ -43,7 +43,7 @@ public class TargetCounter : MonoBehaviour
 			}
 		}
 		timer++;
-		if (igniteCount == 0 && timer > 2000)  //발화중인 블럭이 없을때마다
+		if (igniteCount == 0 && timer > 1200)  //발화중인 블럭이 없을때마다
 		{
 			//scene_control.checkClearOrOver(); // scene_control의 게임 상태를 체크하는 함수를 호출
 			isIgniting = false;

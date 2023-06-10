@@ -39,7 +39,11 @@ public class ScoreCounter : MonoBehaviour
 	public int plusMove;
 
 	AudioSource audioSource;
+	public AudioSource bonusAudioSource;
 	public AudioClip bonusAudio;
+
+	public GameObject leftEnergyIcon;
+	Animator animator;
 	void Start()
 	{
 		this.left_counter = this.gameObject.GetComponent<MoveCounter>();
@@ -53,6 +57,8 @@ public class ScoreCounter : MonoBehaviour
 		this.guistyle.fontSize = 25;
 		this.last.bonus_gage = 0;
 		audioSource = GetComponent<AudioSource>();
+
+		animator = leftEnergyIcon.GetComponent<Animator>();
 	}
 
 	void OnGUI()
@@ -135,13 +141,15 @@ public class ScoreCounter : MonoBehaviour
 	{
 		if (bonusNorm * (bonusCount + 1) <= this.last.total_score - this.scoreManager.GetCurrentScore())
 		{
+			animator.SetTrigger("bonus");
+
 			this.last.bonus_gage = 0;
 			move_counter.plusLeftMoves(plusMove);
 			bonusCount++;
-			audioSource.clip = bonusAudio;      //게이지 다 차면 나는 소리
-			audioSource.pitch += 0.7f;
-			audioSource.Play();
-			audioSource.pitch -= 0.7f;
+			bonusAudioSource.clip = bonusAudio;      //게이지 다 차면 나는 소리
+			//bonusAudioSource.pitch += 0.7f;
+			bonusAudioSource.Play();
+			//audioSource.pitch -= 0.7f;
 		}
 	}
 }

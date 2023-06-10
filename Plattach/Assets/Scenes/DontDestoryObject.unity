@@ -154,8 +154,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CurrentScore: 0
   CurrentMoves: 0
-  CurrentBombItem: 4
-  CurrentColorItem: 4
+  CurrentBombItem: 5
+  CurrentColorItem: 5
 --- !u!4 &2009743221
 Transform:
   m_ObjectHideFlags: 0
